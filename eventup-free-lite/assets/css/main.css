@@ -30,10 +30,12 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #000;
 }
 
 a a:focus {
@@ -55,6 +57,41 @@ ul, ol {
 
 ul li, ol li {
   list-style: none;
+}
+
+span{
+  color: #000;
+}
+
+#contact-text .copy-icon {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 4px;
+  padding: 0;
+}
+
+#contact-text .copy-icon i {
+  font-size: 22px;
+  padding: 4px 2px;
+}
+
+#contact-text .copy-icon i:hover::before {
+  color: #be120e;
+}
+
+#contact-text .copy-icon i::before {
+  color: #888;
+}
+#contact-text .copy-icon.copied i::before {
+  color: #2e7d32;
+}
+
+.items-center{
+  display: flex;
+  align-items: center;
 }
 
 .hero-heading {
@@ -800,45 +837,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   animation-name: fadeInUpMenu;
 }
 
-/* only small tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  .bg-inverse {
-    background: #fff !important;
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-  }
-  .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
-    margin: 0px 15px;
-  }
-  .navbar-nav {
-    padding: 5px 15px;
-  }
-  .navbar-expand-lg .navbar-nav .nav-link {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0px 40px;
-    color: #000;
-  }
-}
-
-@media (max-width: 991px) {
-  .bg-inverse {
-    background: #fff !important;
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-  }
-  .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
-    margin: 0px 15px;
-  }
-  .navbar-nav {
-    padding: 5px 15px;
-  }
-  .navbar-expand-lg .navbar-nav .nav-link {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0px 40px;
-    color: #000;
-  }
-}
-
 #about {
   background: #F6F9F9;
 }
@@ -957,17 +955,10 @@ a.back-to-top:hover, a.back-to-top:focus {
   z-index: 2;
 }
 
-.ready-to-play:before {
-  content: '';
-  background-image: linear-gradient(0deg, #eb0b2f 0, #be120e 100%);
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.7;
+.ready-to-play img {
+  object-fit: contain;
+  transform: translateY(-23%);
+  max-width: 100vw;
 }
 
 video {
@@ -1121,6 +1112,26 @@ h1 {
   font-weight: 700;
 }
 
+.img-thumb img {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #000;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+.banner-btn > .btn {
+  transition: all 0.3s linear;
+  border: 2px solid transparent;
+}
+
+.banner-btn > .btn:hover {
+  box-shadow: 0px 3px 15px 7px #be120e;
+  background: rgba(255, 255, 255, 1);
+  color: #be120e;
+  border: 2px solid #be120e;
+}
+
 /* Sponsors Area */
 #sponsors {
   background: url(../img/background/countdown.jpg) no-repeat center;
@@ -1129,6 +1140,114 @@ h1 {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+}
+
+/* ==========================================================================
+   Nivo Lightbox Nav Styling (match site theme)
+   ========================================================================== */
+.nivo-lightbox-nav {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px; /* rectangular, slightly rounded */
+  background-image: linear-gradient(65deg, #eb0b2f 0, #be120e 100%);
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  text-indent: -9999px; /* hide default text */
+  opacity: 0.95;
+  transition: all 0.2s ease-in-out;
+}
+
+.nivo-lightbox-prev { left: 16px; }
+.nivo-lightbox-next { right: 16px; }
+
+.nivo-lightbox-nav:after {
+  content: '';
+  text-indent: 0;
+}
+
+.nivo-lightbox-prev:after,
+.nivo-lightbox-next:after {
+  font-family: 'LineIcons';
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+}
+
+.nivo-lightbox-prev:after { content: "\ea44"; /* lni-chevron-left */ }
+.nivo-lightbox-next:after { content: "\ea46"; /* lni-chevron-right */ }
+
+.nivo-lightbox-nav:hover {
+  opacity: 1;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button styled like nav buttons */
+.nivo-lightbox-close {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-image: linear-gradient(65deg, #eb0b2f 0, #be120e 100%);
+  color: #fff !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  text-indent: -9999px;
+  opacity: 0.95;
+  transition: all 0.2s ease-in-out;
+  right: 16px !important;
+  top: 16px !important;
+  z-index: 1000000;
+}
+
+.nivo-lightbox-close i { display: none; }
+.nivo-lightbox-close:after {
+  content: "\e951"; /* lni-close */
+  font-family: 'LineIcons';
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+  text-indent: 0;
+}
+
+.nivo-lightbox-close:hover {
+  opacity: 1;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 576px) {
+  .nivo-lightbox-nav {
+    width: 48px;
+    height: 48px;
+  }
+  .nivo-lightbox-prev:after,
+  .nivo-lightbox-next:after { font-size: 20px; }
+  .nivo-lightbox-close { width: 48px; height: 48px; }
+  .nivo-lightbox-close:after { font-size: 18px; }
+}
+
+/* Under 1000px, keep buttons inside image with dark translucent background */
+@media (max-width: 1000px) {
+  .nivo-lightbox-nav {
+    background-image: none;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+    opacity: 1;
+  }
+  .nivo-lightbox-prev:after,
+  .nivo-lightbox-next:after {
+    color: #fff; /* ensure icon is white and visible */
+  }
+  .nivo-lightbox-close {
+    background-image: none;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+    right: 8px !important;
+    top: 8px !important;
+  }
 }
 
 #sponsors .section-title-header .section-title {
@@ -1421,6 +1540,7 @@ h1 {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  user-select: none;
 }
 
 .single-intro-text:hover {
@@ -1429,12 +1549,12 @@ h1 {
 
 .single-intro-text i {
   position: absolute;
-  left: -10px;
+  left: 10px;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   top: 20px;
-  font-size: 55px;
+  font-size: 45px;
   color: #bababa;
 }
 
@@ -1587,6 +1707,16 @@ h1 {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.nivo-lightbox-nav{
+  text-decoration: none !important;
+}
+
+.nivo-lightbox-wrap{
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .team-item .overlay-social-icon .social-icons {
@@ -2143,6 +2273,11 @@ footer {
   margin-bottom: 50px;
 }
 
+.footer-logo img {
+  width: 180px;
+  height: auto;
+}
+
 /* ==========================================================================
    Countdown Style Start
    ========================================================================== */
@@ -2359,15 +2494,24 @@ footer {
 /* ==========================================================================
 3. Hero Area
 ========================================================================== */
-.hero-area-bg {
-  background: url(../img/hero-area.jpg) no-repeat;
-  background-size: cover;
-}
-
 #hero-area {
   color: #fff;
   overflow: hidden;
   position: relative;
+}
+
+#hero-area .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  pointer-events: none;
 }
 
 #hero-area .overlay {
@@ -2377,10 +2521,13 @@ footer {
   top: 0px;
   left: 0px;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 #hero-area .contents {
   padding: 160px 20px 180px;
+  position: relative;
+  z-index: 2;
 }
 
 #hero-area .contents .icon {
@@ -2426,4 +2573,56 @@ footer {
   font-size: 16px;
   padding: 12px 40px;
   text-transform: uppercase;
+}
+
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .bg-inverse {
+    background: #fff !important;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+  }
+  .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
+    margin: 0px 15px;
+  }
+  .navbar-nav {
+    padding: 5px 15px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px 40px;
+    color: #000;
+  }
+}
+@media (min-width: 2000px) {
+  .ready-to-play {
+    max-height: 70vh;
+    height: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .bg-inverse {
+    background: #fff !important;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+  }
+  .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
+    margin: 0px 15px;
+  }
+  .navbar-nav {
+    padding: 5px 15px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px 40px;
+    color: #000;
+  }
+}
+
+@media (max-width: 1500px) {
+  .ready-to-play {
+    max-height: 450px;
+    height: auto;
+  }
 }
