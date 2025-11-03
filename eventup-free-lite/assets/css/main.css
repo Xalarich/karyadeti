@@ -1216,6 +1216,7 @@ h1 {
 .nivo-lightbox-close:hover {
   opacity: 1;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
@@ -1373,14 +1374,19 @@ h1 {
 }
 
 .schedule .card-header .images-box {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   float: left;
   margin-right: 20px;
 }
 
 .schedule .card-header .images-box img {
   border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  top: -15px;
+  position: relative;
 }
 
 .schedule .card-header .time {
