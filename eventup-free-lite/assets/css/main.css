@@ -1380,6 +1380,10 @@ h1 {
   margin-right: 20px;
 }
 
+.download-leaflet{
+  margin-bottom: 20px;
+}
+
 .schedule .card-header .images-box img {
   border-radius: 50%;
   width: 90px;
@@ -1786,6 +1790,18 @@ h1 {
 .team-item .overlay-social-icon .social-icons li .lni-google-plus:hover {
   background: #ea4335;
 }
+ li .lni-instagram {
+  color: rgba(234, 67, 53, 0.7);
+}
+
+ li .lni-instagram:hover {
+  color: #ea4335;
+}
+
+.instagram > a:hover {
+  text-decoration: none;
+  border-color: #ea4335;
+}
 
 .team-item .overlay-social-icon .social-icons li .lni-pinterest {
   background: rgba(189, 8, 28, 0.7);
@@ -1828,6 +1844,33 @@ h1 {
   -moz-transform: translateY(0px);
   transform: translateY(0px);
 }
+
+.text-center.add-car {
+  margin-bottom:20px;
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-item.add-car > .btn{
+  background-color: white;
+  color: #be120e !important;
+}
+
+.nav-item.add-car > .btn:hover{
+  background-color: red !important;
+  color: #fff !important;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #fff;
+  background-image: none;
+  background-clip: none;
+}
+
 
 .blog-item {
   background-color: #fff;

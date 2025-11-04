@@ -75,6 +75,11 @@
                   Kontakt
                 </a>
               </li>
+              <li class="nav-item add-car" style="display: flex;align-items: center; ">
+                <a class="btn" href="#" data-toggle="modal" data-target="#exhibitModal">
+                  Přihlásit auto
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -1103,7 +1108,7 @@
     <!-- Ticket Pricing Area End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="section-padding">
+    <section id="blog" class="section-padding" style="display: none !important;">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -1209,15 +1214,13 @@
         <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
           <div class="col-lg-12">
             <div class="sponsors-logo text-center">
-               <a href="https://www.extrakola.cz/"><img style="max-width:250px;" src="assets/img/sponsors/logo-1.png" alt=""></a>
-               <a href="https://www.indiancz.cz/"><img style="max-width:250px;" src="assets/img/sponsors/logo-2.png" alt=""></a>
-               <a href="https://www.level-cz.com/"><img style="max-width:250px;" src="assets/img/sponsors/logo-3.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-4.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-5.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-6.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-7.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-8.png" alt=""></a>
-               <a href=""><img style="max-width:250px;" src="assets/img/sponsors/logo-9.png" alt=""></a>
+               <a target="_blank" href="https://www.extrakola.cz/"><img style="max-width:250px;" src="assets/img/sponsors/logo-1.png" alt="extrakola"></a>
+               <a target="_blank" href="https://www.indiancz.cz/"><img style="max-width:250px;" src="assets/img/sponsors/logo-2.png" alt="indian motorbikes"></a>
+               <a target="_blank" href="https://www.level-cz.com/"><img style="max-width:250px;" src="assets/img/sponsors/logo-3.png" alt="level trucks"></a>
+               <a target="_blank" href="https://www.bluebug.cz/?fbclid=IwdGRjcAN1wDdjbGNrA3XALGV4dG4DYWVtAjExAAEetjXR0aVMG1bplqgz93iGmhCdfLVrP2ptde2XkG4SQxYX6VdID3tiwFxyndo_aem_kFHHW9wSsxQ0OLnh-0DNJw"><img style="max-width:250px;" src="assets/img/sponsors/logo-4.png" alt="Bluebug detailing"></a>
+               <a target="_blank" href="https://www.detail-store.cz/?gad_source=1&gad_campaignid=22657476635&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeVHV8y1QT-h7VzrI71jcD6vA1cE66GEGR6sB1xasULDLURMQd4NEIxoCXpUQAvD_BwE"><img style="max-width:250px;" src="assets/img/sponsors/logo-5.png" alt="Detail Store"></a>
+               <a target="_blank" href="https://www.kiss.cz/"><img style="max-width:250px;" src="assets/img/sponsors/logo-6.png" alt="Kiss Rádio"></a>
+               <a target="_blank" href="https://www.elanrevival.eu/"><img style="max-width:250px;" src="assets/img/sponsors/logo-7.png" alt="Elán Revival"></a>
             </div><!-- sponsors logo end-->
          </div>
         </div>
@@ -1328,10 +1331,10 @@
     <!-- Contact text End -->
 
     <footer>
-      <div class="container">
+      <div class="container" style="padding-top: 20px;">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-12 col-xs-12">
-            <div class="subscribe-inner wow fadeInDown" data-wow-delay="0.3s">
+            <div  style="display: none !important;" data-wow-delay="0.3s">
               <h2 class="subscribe-title">Pro nejnovější aktualizace</h2>
               <form class="text-center form-inline">
                 <input class="mb-20 form-control" name="email" placeholder="Zadejte váš email zde">
@@ -1343,15 +1346,19 @@
             <div class="footer-logo">
               <img src="assets/img/logo.png" alt="">
             </div>
+            <div class="download-leaflet text-center">
+              <a href="assets/letak.pdf" download class="btn btn-common"><i class="lni-download"></i> Stáhnout leták (PDF)</a>
+            </div>
+            <div class="text-center add-car" style="margin-top: 10px;">
+              <a href="#" class="btn btn-common" data-toggle="modal" data-target="#exhibitModal"><i class="lni-pencil"></i> Přihlásit auto</a>
+            </div>
             <div class="social-icons-footer">
               <ul>
-                <li class="facebook"><a target="_blank" href="3"><i class="lni-facebook-filled"></i></a></li>
-                <li class="twitter"><a target="_blank" href="3"><i class="lni-twitter-filled"></i></a></li>
-                <li class="pinterest"><a target="_blank" href="3"><i class="lni-pinterest"></i></a></li>
+                <li class="instagram"><a target="_blank" href="https://www.instagram.com/kary_deti_motorky/"><i class="lni-instagram"></i></a></li>
               </ul>
             </div>
             <div class="site-info">
-              <p>Navrženo a vyvinuto <a href="http://uideck.com" rel="nofollow">UIdeck</a></p>
+              <p>Navrženo a vyvinuto <a href="https://www.linkedin.com/in/xalarich/" target="_blank" rel="nofollow">Jiří Boudík</a></p>
             </div>
           </div>
         </div>
@@ -1362,6 +1369,59 @@
     <a href="#" class="back-to-top">
     	<i class="lni-chevron-up"></i>
     </a>
+
+    <!-- Exhibit Modal -->
+    <div class="modal fade" id="exhibitModal" tabindex="-1" role="dialog" aria-labelledby="exhibitModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="exhibitModalLabel">Přihláška k vystavení auta</h5>
+            <p>Chcete vystavit auto? Napište nám!</p>
+          </div>
+          <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator" action="assets/php/send-exhibit.php" novalidate>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 form-line">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jméno" required data-error="Zadejte prosím vaše jméno">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6 form-line">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required data-error="Zadejte prosím váš email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12 form-line">
+                  <div class="form-group">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon" required data-error="Zadejte prosím váš telefon">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control" rows="4" id="message" name="message" placeholder="Zpráva" required data-error="Napište vaši zprávu"></textarea>
+                  </div>
+                  <div class="form-submit">
+                    <button type="submit" class="btn btn-common" id="form-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Odeslat zprávu</button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                  </div>
+                </div>
+              </div>
+              <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+                <input type="text" name="company" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="alert d-none" id="formAlert"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <div id="preloader">
       <div class="sk-circle">
@@ -1392,6 +1452,7 @@
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/nivo-lightbox.js"></script>
     <script src="assets/js/video.js"></script>
+    <script src="assets/js/modal-form.js"></script>
     <script src="assets/js/main.js"></script>      
   </body>
 </html>
