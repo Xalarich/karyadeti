@@ -25,6 +25,18 @@ h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
 }
 
+.pb-2{
+  padding-bottom: 8px;
+}
+
+.text-bold{
+  font-weight: 700 !important;
+}
+
+.text-lg{
+  font-size: 18px;
+}
+
 a {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -616,27 +628,23 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .top-nav-collapse {
-  background: #fff;
   z-index: 999999;
   top: 0px !important;
   min-height: 58px;
-  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  background: #fff !important;
+  background: #000 !important;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.14), 0 7px 30px rgba(0, 0, 0, 0.28);
 }
 
 .top-nav-collapse .navbar-brand {
   top: 0px;
 }
 
-.top-nav-collapse .navbar-nav .nav-link {
-  color: #000 !important;
-}
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
   color: #eb0b2f !important;
@@ -2618,10 +2626,7 @@ footer {
 
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
-  .bg-inverse {
-    background: #fff !important;
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-  }
+
   .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
     margin: 0px 15px;
   }
@@ -2632,7 +2637,7 @@ footer {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0px 40px;
-    color: #000;
+    color: #fff;
   }
 }
 @media (min-width: 2000px) {
@@ -2643,21 +2648,30 @@ footer {
 }
 
 @media (max-width: 991px) {
-  .bg-inverse {
-    background: #fff !important;
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-  }
   .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
     margin: 0px 15px;
   }
+  .navbar {
+    background: #000 !important;
+  }
   .navbar-nav {
-    padding: 5px 15px;
+    padding: 15px 15px;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0px 40px;
-    color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  .nav-item.add-car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item.add-car > .btn{
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }
 
